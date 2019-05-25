@@ -8,4 +8,7 @@
     <bean id="printerHelper" class="com.manan.myspring.spring3.xmlconfig.PrinterHelper">
         <property name="printer" ref="jsonPrinter"/>
     </bean>
+    <bean id="printerHelper2" class="com.manan.myspring.spring3.xmlconfig.PrinterHelper">
+        <constructor-arg ref="csvPrinter"/>
+    </bean>
 </beans>

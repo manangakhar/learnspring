@@ -9,5 +9,8 @@ public class DependencyInjectionApplication {
         ApplicationContext context = new ClassPathXmlApplicationContext("SpringBeansResource2.xml");
         PrinterHelper printerHelper = (PrinterHelper) context.getBean("printerHelper");
         printerHelper.getPrinter().print();
+        
+        PrinterHelper printerHelper2 = (PrinterHelper) context.getBean("printerHelper2");
+        printerHelper2.getPrinter().print();
     }
 }

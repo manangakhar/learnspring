@@ -3,6 +3,14 @@ package com.manan.myspring.spring3.xmlconfig;
 public class PrinterHelper {
     IPrinter printer;
 
+    // creating Default Constructor to support setter injection as well
+    public PrinterHelper() {
+    }
+
+    public PrinterHelper(IPrinter printer) {
+        this.printer = printer;
+    }
+
     public void setPrinter(IPrinter printer) {
         this.printer = printer;
     }
