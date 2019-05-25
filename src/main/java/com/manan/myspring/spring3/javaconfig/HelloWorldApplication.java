@@ -8,5 +8,8 @@ public class HelloWorldApplication {
         ApplicationContext contextFromAnnotation = new AnnotationConfigApplicationContext(MyJavaConfig.class);
         final IHelloWorld helloWorld = (IHelloWorld) contextFromAnnotation.getBean("helloWorld");
         helloWorld.sayHello();
+
+        final IHelloWorld helloWorld2 = (IHelloWorld) contextFromAnnotation.getBean("helloBean");
+        helloWorld2.sayHello();
     }
 }
