@@ -1,4 +1,4 @@
-package com.manan.myspring.spring3;
+package com.manan.myspring.spring3.javaconfig;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
