@@ -1,6 +1,7 @@
 package com.manan.myspring.spring3;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
@@ -18,6 +19,10 @@ public class PrintingApplication {
         // prints csv
         final IPrinter iPrinterFromFile = (IPrinter) contextFromFile.getBean("printer");
         iPrinterFromFile.print();
-        
+
+        ApplicationContext contextFromAnnotation = new AnnotationConfigApplicationContext(MyJavaConfig.class);
+        final IHelloWorld helloWorld = (IHelloWorld) contextFromAnnotation.getBean("helloWorld");
+        helloWorld.sayHello();
+
     }
 }
