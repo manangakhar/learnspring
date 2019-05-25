@@ -3,4 +3,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
     <bean id="printer" class="com.manan.myspring.spring3.xmlconfig.JsonPrinter"/>
+    <bean id="jsonPrinter" class="com.manan.myspring.spring3.xmlconfig.JsonPrinter"/>
+    <bean id="csvPrinter" class="com.manan.myspring.spring3.xmlconfig.CsvPrinter"/>
+    <bean id="printerHelper" class="com.manan.myspring.spring3.xmlconfig.PrinterHelper">
+        <property name="printer" ref="jsonPrinter"/>
+    </bean>
 </beans>
