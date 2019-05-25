@@ -14,4 +14,9 @@
     </bean>
     <bean id="printerHelper3" class="com.manan.myspring.spring3.xmlconfig.PrinterHelper"
           p:printer-ref="csvPrinter" p:helperName="commaSeparatedValues"/>
+    <bean id="printerHelperInnerBean" class="com.manan.myspring.spring3.xmlconfig.PrinterHelper">
+        <constructor-arg>
+            <bean class="com.manan.myspring.spring3.xmlconfig.JsonPrinter"/>
+        </constructor-arg>
+    </bean>
 </beans>

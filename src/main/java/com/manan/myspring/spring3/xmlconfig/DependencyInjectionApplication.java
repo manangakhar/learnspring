@@ -16,6 +16,9 @@ public class DependencyInjectionApplication {
         PrinterHelper printerHelper3 = (PrinterHelper) context.getBean("printerHelper3");
         printerHelper3.getPrinter().print();
         System.out.println(printerHelper3.getHelperName());
-        ;
+        
+        // for a single injection, inner bean can be created
+        PrinterHelper printerHelperInnerBean = (PrinterHelper) context.getBean("printerHelperInnerBean");
+        printerHelperInnerBean.getPrinter().print();
     }
 }
