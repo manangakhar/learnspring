@@ -29,4 +29,6 @@
     <bean id="someString" class="java.lang.String">
         <constructor-arg value="helperNameString"/>
     </bean>
+    <bean id="mySingletonBean" class="com.manan.myspring.spring3.xmlconfig.beanscope.SingletonClass"/>
+    <bean id="myPrototypeBean" class="com.manan.myspring.spring3.xmlconfig.beanscope.PrototypeClass" scope="prototype"/>
 </beans>
