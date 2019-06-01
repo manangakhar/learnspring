@@ -54,10 +54,17 @@
         <property name="customEditors">
             <map>
                 <entry key="java.util.Date" value-ref="dateEditor"/>
+                <entry key="com.manan.myspring.spring3.xmlconfig.MyEditorEntity">
+                    <bean class="com.manan.myspring.spring3.xmlconfig.MyCustomPropertyEditor"/>
+                </entry>
             </map>
         </property>
     </bean>
     <bean id="myCustomPropertyBean2" class="com.manan.myspring.spring3.xmlconfig.MyCustomPropertyEntity">
         <constructor-arg value="2019-06-02"/>
+    </bean>
+    <bean id="customPropertyEditorTryEntity" class="com.manan.myspring.spring3.xmlconfig.MyCustomPropertyEntity">
+        <constructor-arg value="2019-06-02"/>
+        <constructor-arg value="a#1"/>
     </bean>
 </beans>
