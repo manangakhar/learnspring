@@ -5,12 +5,14 @@ import java.util.Map;
 
 public class CollectionsBean {
     List<Object> objectList;
+    List<Object> objectArrayList;
     Map<Object, Object> objectMap;
 
     @Override
     public String toString() {
         return "CollectionsBean{" +
                 "objectList=" + objectList +
+                ", objectArrayList=" + objectArrayList +
                 ", objectMap=" + objectMap +
                 '}';
     }
@@ -21,5 +23,9 @@ public class CollectionsBean {
 
     public void setObjectMap(Map<Object, Object> objectMap) {
         this.objectMap = objectMap;
+    }
+
+    public void setObjectArrayList(List<Object> objectArrayList) {
+        this.objectArrayList = objectArrayList;
     }
 }
