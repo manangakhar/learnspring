@@ -45,4 +45,19 @@
             </bean>
         </constructor-arg>
     </bean>
+
+    <bean id="dateEditor" class="org.springframework.beans.propertyeditors.CustomDateEditor">
+        <constructor-arg ref="dateFormat"/>
+        <constructor-arg value="false"/>
+    </bean>
+    <bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+        <property name="customEditors">
+            <map>
+                <entry key="java.util.Date" value-ref="dateEditor"/>
+            </map>
+        </property>
+    </bean>
+    <bean id="myCustomPropertyBean2" class="com.manan.myspring.spring3.xmlconfig.MyCustomPropertyEntity">
+        <constructor-arg value="2019-06-02"/>
+    </bean>
 </beans>

@@ -33,5 +33,8 @@ public class DependencyInjectionApplication {
         // custom property injection
         MyCustomPropertyEntity myCustomPropertyEntity = (MyCustomPropertyEntity) context.getBean("myCustomPropertyBean");
         System.out.println(myCustomPropertyEntity.toString());
+        // custom property injection - spring's CustomDateEditor
+        MyCustomPropertyEntity myCustomPropertyEntity2 = (MyCustomPropertyEntity) context.getBean("myCustomPropertyBean2");
+        System.out.println(myCustomPropertyEntity2.toString());
     }
 }
