@@ -29,5 +29,9 @@ public class DependencyInjectionApplication {
         // collections
         CollectionsBean collectionsBean = (CollectionsBean) context.getBean("myCollectionsBean");
         System.out.println(collectionsBean.toString());
+
+        // custom property injection
+        MyCustomPropertyEntity myCustomPropertyEntity = (MyCustomPropertyEntity) context.getBean("myCustomPropertyBean");
+        System.out.println(myCustomPropertyEntity.toString());
     }
 }

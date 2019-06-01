@@ -35,4 +35,14 @@
     <bean id="myPrototypeBean" class="com.manan.myspring.spring3.xmlconfig.beanscope.PrototypeClass" scope="prototype"/>
     <context:component-scan base-package="com.manan.myspring.spring3.javaconfig.componentscan"/>
     <import resource="SpringBeansResource2-collections.xml"/>
+    <bean id="dateFormat" class="java.text.SimpleDateFormat">
+        <constructor-arg value="yyyy-MM-dd"/>
+    </bean>
+    <bean id="myCustomPropertyBean" class="com.manan.myspring.spring3.xmlconfig.MyCustomPropertyEntity">
+        <constructor-arg>
+            <bean factory-bean="dateFormat" factory-method="parse">
+                <constructor-arg value="2019-06-01"/>
+            </bean>
+        </constructor-arg>
+    </bean>
 </beans>
