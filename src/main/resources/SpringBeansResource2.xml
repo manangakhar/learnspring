@@ -19,4 +19,14 @@
             <bean class="com.manan.myspring.spring3.xmlconfig.JsonPrinter"/>
         </constructor-arg>
     </bean>
+    <import resource="SpringBeansResource2-2.xml"/>
+    <bean id="printerHelperExternalInternal" class="com.manan.myspring.spring3.xmlconfig.PrinterHelper">
+        <constructor-arg name="printer" ref="printerExternal"/>
+        <property name="helperName">
+            <ref local="someString"/>
+        </property>
+    </bean>
+    <bean id="someString" class="java.lang.String">
+        <constructor-arg value="helperNameString"/>
+    </bean>
 </beans>
