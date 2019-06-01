@@ -16,14 +16,18 @@ public class DependencyInjectionApplication {
         PrinterHelper printerHelper3 = (PrinterHelper) context.getBean("printerHelper3");
         printerHelper3.getPrinter().print();
         System.out.println(printerHelper3.getHelperName());
-        
+
         // for a single injection, inner bean can be created
         PrinterHelper printerHelperInnerBean = (PrinterHelper) context.getBean("printerHelperInnerBean");
         printerHelperInnerBean.getPrinter().print();
-        
+
         // to check ref local bean init
         PrinterHelper printerHelperExternalInternal = (PrinterHelper) context.getBean("printerHelperExternalInternal");
         printerHelperExternalInternal.getPrinter().print();
         System.out.println(printerHelperExternalInternal.getHelperName());
+
+        // collections
+        CollectionsBean collectionsBean = (CollectionsBean) context.getBean("myCollectionsBean");
+        System.out.println(collectionsBean.toString());
     }
 }

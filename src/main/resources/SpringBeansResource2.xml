@@ -34,4 +34,5 @@
     <bean id="mySingletonBean" class="com.manan.myspring.spring3.xmlconfig.beanscope.SingletonClass" lazy-init="true"/>
     <bean id="myPrototypeBean" class="com.manan.myspring.spring3.xmlconfig.beanscope.PrototypeClass" scope="prototype"/>
     <context:component-scan base-package="com.manan.myspring.spring3.javaconfig.componentscan"/>
+    <import resource="SpringBeansResource2-collections.xml"/>
 </beans>
